@@ -1,0 +1,43 @@
+h1 {
+  /* Alberto & Lucia: */
+  font-family: PlayfairDisplaySC-Bold;
+  font-size: 75px;
+  color: #1D1D1D;
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+}
+
+.type-italic {
+  /* Nos hace muy felices: */
+  font-family: PlayfairDisplay-Italic;
+  font-size: 20px;
+  color: #404040;
+  &-sm {
+    font-size: 14px;
+    color: #979797;
+    letter-spacing: 3px;
+  }
+}
+
+.bg-section {
+  height: 90vh;
+  background-image: url('../assets/images/topo.svg')
+}
+
+.big-heart {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.intro {
+  display: flex;
+  max-width: 1070px;
+  &-item--left {
+    align-self: center;
+    margin-right: -50px;
+    z-index: 2;
+  }
+  &-item--right {
+    align-self: flex-end;
+  }
+}
