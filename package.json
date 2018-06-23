@@ -4,7 +4,7 @@
   "productName": "Boda Alberto y Lucía",
   "productSite": "bodapañera",
   "description": "Nos hace muy felices celebrar nuestra boda junto a vosotros. La ceremonia tendrá lugar el 6 de Octubre a las 18:30h en Villa María bonita, Crevillente.",
-  "version": "1.0.0",
+  "version": "1.7.0",
   "license": "MIT",
   "scripts": {
     "dev": "poi",
@@ -18,12 +18,13 @@
     "name": "enreckless.com"
   },
   "dependencies": {
+    "bourbon": "^5.0.1",
+    "firebase-tools": "^3.18.6",
     "normalize.css": "^8.0.0",
     "object-assign": "^4.1.1",
     "offline-plugin": "^5.0.5",
     "promise-polyfill": "^8.0.0",
-    "vue-router": "^3.0.1",
-    "firebase-tools":"^3.18.6"
+    "vue-router": "^3.0.1"
   },
   "devDependencies": {
     "@poi/plugin-bundle-report": "10.0.1",
