@@ -17,5 +17,5 @@
   </section>
 </template>
 
-<!-- If I have to write more css I prefer have another separate file -->
+<!-- If I have to write more css I prefer another separate file -->
 <style src="../scss/main.scss" scoped></style>
