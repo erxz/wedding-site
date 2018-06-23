@@ -1,0 +1,38 @@
+{
+  "private": true,
+  "name": "boda-api",
+  "productName": "Boda Alberto y Lucía",
+  "productSite": "bodapañera",
+  "description": "Nos hace muy felices celebrar nuestra boda junto a vosotros. La ceremonia tendrá lugar el 6 de Octubre a las 18:30h en Villa María bonita, Crevillente.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "poi",
+    "build": "poi build",
+    "report": "poi build --bundle-report",
+    "serve": "serve dist --single",
+    "test": "tyu",
+    "deploy": "tyu && poi build && firebase deploy && npm version patch"
+  },
+  "author": {
+    "name": "enreckless.com"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.0",
+    "object-assign": "^4.1.1",
+    "offline-plugin": "^5.0.5",
+    "promise-polyfill": "^8.0.0",
+    "vue-router": "^3.0.1",
+    "firebase-tools":"^3.18.6"
+  },
+  "devDependencies": {
+    "@poi/plugin-bundle-report": "10.0.1",
+    "@poi/plugin-offline": "10.0.1",
+    "@vue/test-utils": "1.0.0-beta.19",
+    "node-sass": "^4.9.0",
+    "poi": "^10.2.9",
+    "sass-loader": "^7.0.3",
+    "serve": "^9.0.0",
+    "tyu": "^1.0.4"
+  }
+}

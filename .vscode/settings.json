@@ -1,0 +1,14 @@
+{
+  "eslint.enable": true,
+  "sasslint.enable": true,
+    // After the configuration it's eassy to keep tidy the workspace
+    "files.exclude": {
+      ".editorconfig": true,
+      ".firebaserc": true,
+      "dist": true,
+      "**/polyfills.js": true,
+      "**/pwa.js": false,
+      "package-lock.json": true,
+      "yarn.lock": true
+  },
+}
