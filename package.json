@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "bourbon": "^5.0.1",
-    "firebase-tools": "^3.18.6",
+    "firebase-tools": "^3.19.0",
     "normalize.css": "^8.0.0",
     "object-assign": "^4.1.1",
     "offline-plugin": "^5.0.5",
@@ -29,7 +29,7 @@
   "devDependencies": {
     "@poi/plugin-bundle-report": "10.0.1",
     "@poi/plugin-offline": "10.0.1",
-    "@vue/test-utils": "1.0.0-beta.19",
+    "@vue/test-utils": "^1.0.0-beta.19",
     "node-sass": "^4.9.0",
     "poi": "^10.2.9",
     "sass-loader": "^7.0.3",
