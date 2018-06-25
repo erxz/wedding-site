@@ -1,0 +1,27 @@
+// Variables
+$breakpoints: (
+  xs: 557px,
+  sm: 768px,
+  md: 992px,
+  xs-only: 575.98px,
+  sm-only: 767.98px,
+  md-only: 1199.98px
+);
+
+// Very basic mixin
+@mixin media($breakpoint) {
+  @if ($breakpoint==sm or $breakpoint==md or $breakpoint==xs) {
+    @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  }
+  @else if ($breakpoint==sm-only or $breakpoint==xs-only or $breakpoint==md-only) {
+    @media (max-width: #{map-get($breakpoints, $breakpoint - 2)}) {
+      @content;
+    }
+  }
+  @else {
+    @warn "Breakpoint mixin supports: xs, sm and md";
+  }
+}
+
