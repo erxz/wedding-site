@@ -1,0 +1,99 @@
+// Headings
+// -------------
+h1 {
+  @include heading-h1;
+  text-transform: uppercase;
+}
+
+h2 {
+  @include heading-h2;
+}
+
+h3 {
+  @include heading-h3;
+}
+
+h6 {
+  @include heading-h6;
+}
+
+h1,
+h2,
+h3,
+h6 {
+  line-height: 1.2;
+}
+
+p {
+  @include paragraph;
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 9px 16px 0 rgba(0, 0, 0, 0.16);
+}
+
+// Grid
+// -------------
+.container {
+  @include container;
+  &--one {
+    @include container-size(1069px);
+  }
+}
+
+.row {
+  @include row;
+}
+
+.col {
+  @include col;
+}
+
+// Helpers
+// -------------
+.uppercase {
+  text-transform: uppercase;
+}
+
+.btn {
+  @include btn;
+}
+
+// View
+// -------------
+.bg-section {
+  background-image: url('../assets/images/topo.svg');
+  @media (min-width: 769px) {
+    height: 100vh;
+  }
+}
+
+.big-heart {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.intro {
+  &-item {
+    &--left {
+      align-self: center;
+      z-index: 2;
+      @include column(32%);
+      @media (min-width: 769px) {
+        margin-right: -20px;
+        h1 {
+          font-size: 75px
+        }
+      }
+    }
+    &--center {
+      @include column(41%);
+    }
+    &--right {
+      align-self: flex-end;
+    }
+  }
+}

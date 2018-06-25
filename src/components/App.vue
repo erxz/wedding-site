@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="app" v-bind:class="{ 'app-xs': $route.path !== '/test' }">
+  <div id="app" class="app" v-bind:class="{ 'app-xs font-system': $route.path !== '/test' }">
     <router-view />
     <appfooter></appfooter>
   </div>
@@ -18,11 +18,22 @@ export default {
 <!-- CSS libraries -->
 <style src="normalize.css/normalize.css"></style>
 
+<!-- Some global styles -->
 <style>
-  @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:600");
-  .app {
-    font-family: "Source Sans Pro", sans-serif;
-    color: #1d1d1d;
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family:  "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: hsl(0, 0%, 11%);
+    line-height: 1.5;
+  }
+  a {
+    text-decoration: none;
+  }
+  a:visited {
+    color: currentColor;
   }
   .app-xs {
     padding: 15px;

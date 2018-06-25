@@ -1,0 +1,55 @@
+// Columns
+$one: 8.33%;
+$two: 16.667%;
+$three: 25%;
+$four: 33.333%;
+$five: 41.667%;
+$six: 50%;
+$seven: 58.333%;
+$eight: 66.667%;
+$nine: 75%;
+$ten: 83.333%;
+$eleven: 91.667%;
+$twelve: 100%;
+// Row
+@mixin row {
+  display: flex;
+  justify-content: center;
+  margin-right: -15px;
+  margin-left: -15px;
+  @media (max-width: 769px) {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+// Column
+@mixin col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+  padding: .75rem;
+}
+
+// Column Mixin
+@mixin column($columns, $limit: 0%) {
+  @media screen and (min-width: 769px) {
+    flex: none;
+    width: $columns - $limit;
+  }
+}
+
+// Container
+@mixin container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@mixin container-size ($size) {
+  max-width: $size + 15;
+}
