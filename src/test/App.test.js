@@ -33,4 +33,8 @@ describe('Home', () => {
     const wrapper = mount(Home)
     expect(wrapper.isVueInstance()).toBeTruthy()
   })
+  test('has correct content', () => {
+    const wrapper = mount(Home)
+    expect(wrapper.text()).toBe(`Alberto & Lucia  Nos hace muy felices celebrar nuestra boda junto a vosotros. Completa el formulario y confirma si asistirás! completar`)
+  })
 })

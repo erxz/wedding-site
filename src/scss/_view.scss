@@ -2,7 +2,7 @@
 // -------------
 h1 {
   @include heading-h1;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 h2 {
@@ -96,6 +96,12 @@ img {
   @include media(xs-only) {
     padding-bottom: 1rem;
   }
+  svg {
+    transition: transform .2s ease-in-out;
+  }
+  svg:hover {
+    transform: scale(1.2);
+  }
 }
 
 .intro {
@@ -105,7 +111,7 @@ img {
       z-index: 2;
       @include column(32%);
       @include media(sm) {
-        margin-right: -20px;
+        margin-right: -25px;
         h1 {
           font-size: rem-calc(75)
         }
@@ -115,6 +121,7 @@ img {
       @include column(41%);
     }
     &--right {
+      margin-left: 1rem;
       align-self: flex-end;
     }
   }
