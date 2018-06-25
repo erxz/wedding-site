@@ -22,15 +22,16 @@
     flex-direction: column;
     margin-bottom: 1em;
   }
-
   h1 {
     font-size: 25px;
     margin-bottom: 0;
   }
-
   h1,
   p {
     text-align: center;
+  }
+  a {
+    text-decoration: underline;
   }
 </style>
 
