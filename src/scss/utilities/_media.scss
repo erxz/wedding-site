@@ -8,7 +8,7 @@ $breakpoints: (
   md-only: 1199.98px
 );
 
-// Very basic mixin
+// Very basic mixin. Not ideal tbh.
 @mixin media($breakpoint) {
   @if ($breakpoint==sm or $breakpoint==md or $breakpoint==xs) {
     @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
