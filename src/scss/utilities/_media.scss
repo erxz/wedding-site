@@ -16,7 +16,7 @@ $breakpoints: (
     }
   }
   @else if ($breakpoint==sm-only or $breakpoint==xs-only or $breakpoint==md-only) {
-    @media (max-width: #{map-get($breakpoints, $breakpoint - 2)}) {
+    @media (max-width: #{map-get($breakpoints, $breakpoint)}) {
       @content;
     }
   }
@@ -24,4 +24,3 @@ $breakpoints: (
     @warn "Breakpoint mixin supports: xs, sm and md";
   }
 }
-
