@@ -40,13 +40,6 @@ $black-line: hsl(0,
   font-weight: 400;
 }
 
-/// Font Primary Regular.
-@mixin font--secondary-regular {
-  font-family: $font-secondary;
-  font-style: normal;
-  font-weight: 400;
-}
-
 /// Used by `h2` and `h3`
 @mixin heading-italic {
   @include font--primary-italic;
@@ -55,7 +48,7 @@ $black-line: hsl(0,
 
 /// Used by `h1`
 @mixin heading-h1 {
-  font-size: 65px;
+  font-size: rem-calc(65);
   @include font--title;
   color: $black;
   margin: 0;
@@ -64,19 +57,19 @@ $black-line: hsl(0,
 /// Used by `h2`
 @mixin heading-h2 {
   @include heading-italic;
-  font-size: 24px;
+  font-size: rem-calc(24)
 }
 
 /// Used by `h3`
 @mixin heading-h3 {
   @include heading-italic;
-  font-size: 24px;
+  font-size: rem-calc(24);
 }
 
 /// Used by `h6`
 @mixin heading-h6 {
-  font-size: 75px;
-  @include font--title;
+  font-size: rem-calc(14);
+  @include font--primary-regular;
   color: $black;
 }
 
@@ -84,13 +77,13 @@ $black-line: hsl(0,
 @mixin paragraph {
   @include font--primary-italic;
   color: $black-ter;
-  font-size: 20px;
+  font-size: rem-calc(20);
   margin-top: 0;
 }
 
 // Button
 @mixin btn {
-  font-size: .8rem;
+  font-size: rem-calc(14);
   letter-spacing: 2px;
   background-color: $black;
   color: white;
@@ -107,7 +100,7 @@ $black-line: hsl(0,
   border: 1px solid $black;
   padding: .375rem .75rem;
   line-height: 1.5;
-  box-shadow: 0 9px 16px 1px rgba(0, 0, 0, 0.30);
+  box-shadow: 0 4px 10px 0px rgba(0, 0, 0, 0.3);
   transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
   &:hover {
     background-color: tint($black, 10%);

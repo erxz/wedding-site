@@ -66,7 +66,7 @@ img {
 // -------------
 .bg-section {
   background-image: url('../assets/images/topo.svg');
-  @media (min-width: 769px) {
+  @include media(sm) {
     height: 100vh;
   }
 }
@@ -74,6 +74,9 @@ img {
 .big-heart {
   text-align: center;
   padding: 2rem 0;
+  @include media(xs-only) {
+    padding-bottom: 1rem;
+  }
 }
 
 .intro {
@@ -82,10 +85,10 @@ img {
       align-self: center;
       z-index: 2;
       @include column(32%);
-      @media (min-width: 769px) {
+      @include media(sm) {
         margin-right: -20px;
         h1 {
-          font-size: 75px
+          font-size: rem-calc(75)
         }
       }
     }
