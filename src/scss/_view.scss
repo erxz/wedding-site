@@ -111,7 +111,7 @@ img {
       z-index: 2;
       @include column(32%);
       @include media(sm) {
-        margin-right: -25px;
+        margin-right: -30px;
         h1 {
           font-size: rem-calc(75)
         }
