@@ -9,7 +9,7 @@
           <h1>Alberto & Lucia</h1>
         </div>
         <div class="col intro-item--center">
-          <img src="../assets/images/alberlucia2x.jpg" alt="Alberto y Lucía dándose la mano" width="427">
+          <img src="~@/assets/images/alberlucia2x.jpg" alt="Alberto y Lucía dándose la mano" width="427">
         </div>
         <div class="col intro-item--right">
           <p class="type-italic">Nos hace muy felices celebrar nuestra boda junto a vosotros. Completa el formulario y confirma si asistirás!</p>
