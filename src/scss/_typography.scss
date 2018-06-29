@@ -40,13 +40,6 @@ $black-line: hsl(0,
   font-weight: 400;
 }
 
-/// Font Primary Regular.
-@mixin font--secondary-regular {
-  font-family: $font-secondary;
-  font-style: normal;
-  font-weight: 400;
-}
-
 /// Used by `h2` and `h3`
 @mixin heading-italic {
   @include font--primary-italic;
@@ -55,7 +48,7 @@ $black-line: hsl(0,
 
 /// Used by `h1`
 @mixin heading-h1 {
-  font-size: 65px;
+  font-size: rem-calc(65);
   @include font--title;
   color: $black;
   margin: 0;
@@ -64,19 +57,19 @@ $black-line: hsl(0,
 /// Used by `h2`
 @mixin heading-h2 {
   @include heading-italic;
-  font-size: 24px;
+  font-size: rem-calc(24)
 }
 
 /// Used by `h3`
 @mixin heading-h3 {
   @include heading-italic;
-  font-size: 24px;
+  font-size: rem-calc(24);
 }
 
 /// Used by `h6`
 @mixin heading-h6 {
-  font-size: 75px;
-  @include font--title;
+  font-size: rem-calc(14);
+  @include font--primary-regular;
   color: $black;
 }
 
@@ -84,18 +77,17 @@ $black-line: hsl(0,
 @mixin paragraph {
   @include font--primary-italic;
   color: $black-ter;
-  font-size: 20px;
+  font-size: rem-calc(20);
   margin-top: 0;
 }
 
 // Button
 @mixin btn {
-  font-size: .8rem;
-  letter-spacing: 2px;
-  background-color: $black;
+  font-size: rem-calc(12);
+  letter-spacing: 1.5px;
   color: white;
   display: inline-block;
-  font-weight: 400;
+  font-weight: 600;
   text-align: center;
   white-space: nowrap;
   cursor: pointer;
@@ -104,18 +96,19 @@ $black-line: hsl(0,
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  border: 1px solid $black;
-  padding: .375rem .75rem;
+  padding: .475rem .85rem;
   line-height: 1.5;
-  box-shadow: 0 9px 16px 1px rgba(0, 0, 0, 0.30);
-  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  background: linear-gradient(180deg, $black, tint($black, 5%));
+  border: 1px solid $black;
+  box-shadow: 0 9px 16px 1px rgba($black, 0.30);
+  transition: color .2s ease-in, background-color .2s ease-in, border-color .2s ease-in;
   &:hover {
-    background-color: tint($black, 10%);
-    border-color: tint($black, 10%);
+    background: linear-gradient(180deg, tint($black, 10%), tint($black, 20%));
   }
-  &:focus,
-  &.focus {
+  &:focus {
     outline: 0;
-    box-shadow: 0 0 0 0.1rem rgba($black, .5);
+    background: linear-gradient(180deg, shade($black, 20%), shade($black, 20%));
+    border-color: shade($black, 30%);
+    box-shadow: inset 0 0 0 0 transparent, 0 1px 0 0 rgba(22, 29, 37, .05), 0 0 1px 0 shade($black, 20%);
   }
 }

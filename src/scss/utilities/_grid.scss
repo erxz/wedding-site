@@ -1,23 +1,24 @@
 // Columns
-$one: 8.33%;
-$two: 16.667%;
-$three: 25%;
-$four: 33.333%;
-$five: 41.667%;
-$six: 50%;
-$seven: 58.333%;
-$eight: 66.667%;
-$nine: 75%;
-$ten: 83.333%;
-$eleven: 91.667%;
-$twelve: 100%;
+$col-one: 8.33%;
+$col-two: 16.667%;
+$col-three: 25%;
+$col-four: 33.333%;
+$col-five: 41.667%;
+$col-six: 50%;
+$col-seven: 58.333%;
+$col-eight: 66.667%;
+$col-nine: 75%;
+$col-ten: 83.333%;
+$col-eleven: 91.667%;
+$col-twelve: 100%;
+
 // Row
 @mixin row {
   display: flex;
   justify-content: center;
   margin-right: -15px;
   margin-left: -15px;
-  @media (max-width: 769px) {
+  @include media (sm-only) {
     display: block;
     width: 100%;
     margin: 0 auto;
@@ -35,7 +36,7 @@ $twelve: 100%;
 
 // Column Mixin
 @mixin column($columns, $limit: 0%) {
-  @media screen and (min-width: 769px) {
+  @include media(sm) {
     flex: none;
     width: $columns - $limit;
   }

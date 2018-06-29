@@ -3,9 +3,10 @@
 // Bourbon
 @import '../../node_modules/bourbon/core/bourbon';
 
-// Neat grid configuration
-
-@import '../scss/grid';
+// Utilities
+@import '../scss/utilities/media';
+@import '../scss/utilities/unit';
+@import '../scss/utilities/grid';
 
 // Typography
 @import '../scss/typography';
