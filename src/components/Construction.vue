@@ -6,11 +6,9 @@
     <h1>{{introText}}</h1>
     <p>Completa el formulario de <a href="https://goo.gl/forms/J8DAIlVWYavx0XnD2">asistencia aquí</a> </p>
     <div style="width:100%;height:0;padding-bottom:75%;position:relative;">
-      <iframe src="https://giphy.com/embed/o0UDAcR1XmWJi" width="100%" height="100%" style="position:absolute" frameBorder="0"
+      <iframe title="Sailor Moon gif" src="https://giphy.com/embed/o0UDAcR1XmWJi" width="100%" height="100%" style="position:absolute" frameBorder="0"
         class="giphy-embed" allowFullScreen></iframe>
     </div>
-    <!-- <h1>La página no ha sido encontrada</h1>
-    <p><a href="/">Vuelve al inicio</a></p> -->
   </div>
 </template>
 
