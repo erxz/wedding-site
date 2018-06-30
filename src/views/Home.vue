@@ -32,7 +32,9 @@
             <h6 class="uppercase">¿Dónde?</h6>
             <h2>Villa María Bonita <br> Crevillente</h2>
             <div class="divider"></div>
-            <img src="~@/assets/images/map.png" alt="Imagen de la ubicación de Villa María" class="where-map">
+            <div class="where-map">
+               <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d100276.89466781069!2d-0.8830823!3d38.2411596!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd63b94322204949%3A0x49368d13b65285ea!2zVmlsbGEgIk1hcsOtYSBCb25pdGEi!5e0!3m2!1sen!2ses!4v1530359510883" width="440" height="220" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
           </div>
         </div>
       </div>
