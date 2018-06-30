@@ -17,13 +17,16 @@
     padding-top: 15px;
     padding-bottom: 10px;
   }
+
   .footer-wrapper {
-    max-width: 1200px;
+    max-width: 940px;
     width: 95%;
   }
-  .link-git{
+
+  .link-git {
     color: inherit;
   }
+
   .sr-only {
     position: absolute;
     width: 1px;
@@ -31,9 +34,10 @@
     padding: 0;
     margin: -1px;
     overflow: hidden;
-    clip: rect(0,0,0,0);
+    clip: rect(0, 0, 0, 0);
     border: 0;
   }
+
   .inline-svg {
     font-size: 20px;
     display: inline-block;

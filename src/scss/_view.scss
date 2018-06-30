@@ -10,7 +10,11 @@ h2 {
 }
 
 h3 {
-  @include heading-h3;
+  @include heading-h2-sm;
+}
+
+h4 {
+  @include heading-h4;
 }
 
 h6 {
@@ -20,12 +24,14 @@ h6 {
 h1,
 h2,
 h3,
+h4,
 h6 {
   line-height: 1.2;
 }
 
 p {
   @include paragraph;
+  margin-top: 0;
 }
 
 img {
@@ -42,6 +48,12 @@ img {
   &--one {
     @include container-size(1069px);
   }
+  &--two {
+    @include container-size(1169px);
+  }
+  &--three {
+    @include container-size(869px);
+  }
 }
 
 .row {
@@ -54,6 +66,14 @@ img {
 
 // Helpers
 // -------------
+section {
+  position: relative;
+}
+
+.pattern {
+  background-image: url('../assets/images/pattern.svg');
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -62,10 +82,44 @@ img {
   @include btn;
 }
 
+.divider {
+  background-color: $black-line;
+  height: 1.8px;
+  width: 110px;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  @include media(sm-only) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right
+}
+
 // View
 // -------------
-.bg-section {
-  background-image: url('../assets/images/topo.svg');
+.big-heart {
+  padding: 2rem 0;
+  @include media(xs-only) {
+    padding-bottom: 1rem;
+  }
+  svg {
+    transition: transform .2s ease-in-out;
+  }
+  svg:hover {
+    transform: scale(1.2);
+  }
+}
+
+// Intro
+// -------------
+.intro {
   @include media(sm) {
     height: 100vh;
     &:before {
@@ -88,32 +142,15 @@ img {
       z-index: -1;
     }
   }
-}
-
-.big-heart {
-  text-align: center;
-  padding: 2rem 0;
-  @include media(xs-only) {
-    padding-bottom: 1rem;
-  }
-  svg {
-    transition: transform .2s ease-in-out;
-  }
-  svg:hover {
-    transform: scale(1.2);
-  }
-}
-
-.intro {
   &-item {
     &--left {
       align-self: center;
       z-index: 2;
       @include column(32%);
       @include media(sm) {
-        margin-right: -30px;
+        margin-right: -2em;
         h1 {
-          font-size: rem-calc(75)
+          font-size: rem-calc(75);
         }
       }
     }
@@ -121,8 +158,66 @@ img {
       @include column(41%);
     }
     &--right {
-      margin-left: 1rem;
+      margin-left: 1em;
       align-self: flex-end;
     }
+  }
+}
+
+// Where
+// -------------
+.where {
+  padding-bottom: 2rem;
+  h2 {
+    margin: .5em 0;
+  }
+  h6 {
+    margin: 1.5em 0;
+  }
+  .container {
+    position: relative;
+  }
+  &-img {
+    @include media(sm) {
+      margin-top: -3em;
+    }
+  }
+  &-link {
+    display: inline-block;
+    margin-top: 3em;
+    @include media(sm-only) {
+      width: 100%;
+      text-align: center;
+    }
+    a {
+      font-size: rem-calc(14);
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: $black;
+      border-bottom: 1px solid #212121;
+    }
+  }
+  &-bg {
+    @include media(sm) {
+      &:before {
+        content: " ";
+        position: absolute;
+        background-image: url('../assets/images/location-bg.png');
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: contain;
+        width: 100%;
+        max-width: 300px;
+        height: 100%;
+        bottom: 15px;
+        z-index: -1;
+      }
+    }
+  }
+  &-col--right {
+    padding-left: 1.5rem;
+  }
+  &-map {
+    margin-top: 2em;
   }
 }

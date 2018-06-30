@@ -12,25 +12,24 @@ $black: hsl(0,
 11%);
 $black-bis: hsl(0,
 0%,
-16%);
-$black-ter: hsl(0,
-0%,
 25%);
 $black-line: hsl(0,
 0%,
 13%);
-/// Font title
-@mixin font--title {
-  font-family: $font-title;
-  font-style: normal;
-  font-weight: 700;
-}
-
+$grey: hsl(0,
+0%,
+59%);
 /// Font Primary Regular.
 @mixin font--primary-regular {
   font-family: $font-primary;
   font-style: normal;
   font-weight: 400;
+}
+
+@mixin font--primary-bold {
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: 700;
 }
 
 /// Font Primary Italic.
@@ -40,7 +39,7 @@ $black-line: hsl(0,
   font-weight: 400;
 }
 
-/// Used by `h2` and `h3`
+/// Used by `h6` and `p`
 @mixin heading-italic {
   @include font--primary-italic;
   color: $black-bis;
@@ -48,37 +47,45 @@ $black-line: hsl(0,
 
 /// Used by `h1`
 @mixin heading-h1 {
+  font-family: $font-title;
+  font-style: normal;
+  font-weight: 700;
   font-size: rem-calc(65);
-  @include font--title;
   color: $black;
   margin: 0;
 }
 
 /// Used by `h2`
 @mixin heading-h2 {
-  @include heading-italic;
-  font-size: rem-calc(24)
+  @include font--primary-bold;
+  font-size: rem-calc(35);
 }
 
 /// Used by `h3`
-@mixin heading-h3 {
-  @include heading-italic;
+@mixin heading-h2-sm {
+  @include font--primary-bold;
   font-size: rem-calc(24);
+}
+
+/// Used by `h4`
+@mixin heading-h4 {
+  @include font--primary-bold;
+  font-size: rem-calc(18);
+  letter-spacing: 2px;
+  color: $grey;
 }
 
 /// Used by `h6`
 @mixin heading-h6 {
-  font-size: rem-calc(14);
-  @include font--primary-regular;
-  color: $black;
+  @include heading-italic;
+  font-size: rem-calc(16);
+  letter-spacing: 2px;
 }
 
 /// Used by `p`
 @mixin paragraph {
-  @include font--primary-italic;
-  color: $black-ter;
+  @include heading-italic;
   font-size: rem-calc(20);
-  margin-top: 0;
 }
 
 // Button
