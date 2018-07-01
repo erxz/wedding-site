@@ -2,6 +2,7 @@
 // -------------
 h1 {
   @include heading-h1;
+  line-height: 1;
   text-transform: capitalize;
 }
 
@@ -22,7 +23,6 @@ h6 {
   @include heading-h6;
 }
 
-h1,
 h2,
 h3,
 h4,
@@ -40,18 +40,6 @@ img {
   max-width: 100%;
   height: auto;
   box-shadow: 0 9px 16px 0 rgba(0, 0, 0, 0.16);
-}
-
-img:not([src]) {
-  visibility: hidden;
-}
-
-/* Fixes Firefox anomaly during image load */
-
-@-moz-document url-prefix() {
-  img:-moz-loading {
-    visibility: hidden;
-  }
 }
 
 // Grid
@@ -248,6 +236,8 @@ section {
   }
 }
 
+// Map 
+// -------------
 .google-map {
   overflow: hidden;
   padding-bottom: 56.25%;
@@ -268,12 +258,19 @@ section {
   }
 }
 
+// Photos
+// -------------
 .photos {
   padding: ($padding*2) 0;
   &-two {
     @include media(sm) {
       float: right;
     }
+  }
+  &:before{
+    top: -85px;
+    height: 95%;
+    transform: scale(-1, 1);
   }
 }
 

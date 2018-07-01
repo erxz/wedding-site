@@ -39,12 +39,6 @@ $grey: hsl(0,
   font-weight: 400;
 }
 
-/// Used by `h6` and `p`
-@mixin heading-italic {
-  @include font--primary-italic;
-  color: $black-bis;
-}
-
 /// Used by `h1`
 @mixin heading-h1 {
   font-family: $font-title;
@@ -77,14 +71,16 @@ $grey: hsl(0,
 
 /// Used by `h6`
 @mixin heading-h6 {
-  @include heading-italic;
+  font-style: normal;
+  font-weight: 400;
   font-size: rem-calc(16);
   letter-spacing: 2px;
 }
 
 /// Used by `p`
 @mixin paragraph {
-  @include heading-italic;
+  @include font--primary-italic;
+  color: $black-bis;
   font-size: rem-calc(20);
 }
 

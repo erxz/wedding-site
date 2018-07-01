@@ -26,9 +26,9 @@
         <div class="row">
           <div class="col where-col--left">
             <v-lazy-image :src="require(`../assets/images/location2x.png`)" alt="Foto de Villa María" width="395" class="where-img" />
-            <div class="where-link">
+            <!-- <div class="where-link">
               <a href="https://goo.gl/maps/aM4tvNE5Yz52" class="uppercase" rel="noopener" target="_blank">ver en google maps</a>
-            </div>
+            </div> -->
           </div>
           <div class="col col--right">
             <h6 class="uppercase">¿Dónde?</h6>
@@ -65,13 +65,12 @@
         </div>
       </div>
     </section>
-    <section class="pattern grey-pattern photos">
+    <section class="grey-pattern photos">
       <div class="container container--one">
         <div class="row">
           <div class="col center">
             <p>Aquí os dejamos algunas fotos de preboda, después
-              <br> subiremos las de la boda así que...
-              <br> no olvidéis enviarnos las vuestras!</p>
+              <br> subiremos las de la boda así que... no olvidéis enviarnos las vuestras!</p>
           </div>
         </div>
         <div class="mansory">
