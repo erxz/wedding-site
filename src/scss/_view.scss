@@ -15,6 +15,7 @@ h3 {
 
 h4 {
   @include heading-h4;
+  margin-top: 0;
 }
 
 h6 {
@@ -62,17 +63,25 @@ img {
 
 .col {
   @include col;
+  &--right {
+    padding-left: 1.5rem;
+  }
 }
 
 // Helpers
 // -------------
+$padding: 2rem;
 section {
   position: relative;
-  padding-bottom: 2rem;
+  padding-bottom: $padding;
+}
+
+.p-t-spacer {
+  padding-top: $padding;
 }
 
 .pattern {
-  background-image: url('../assets/images/pattern.svg');
+  background-image: url('../assets/images/pattern.png');
 }
 
 .uppercase {
@@ -182,6 +191,11 @@ section {
       margin-top: -3em;
     }
   }
+  &-col--left {
+    @include media(sm) {
+      text-align: right;
+    }
+  }
   &-link {
     display: inline-block;
     margin-top: 3em;
@@ -214,10 +228,27 @@ section {
       }
     }
   }
-  &-col--right {
-    padding-left: 1.5rem;
-  }
   &-map {
-    margin-top: 3em;
+    margin-top: 3.5em;
+  }
+}
+
+.google-map {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+  @include media(sm) {
+    padding-bottom: 39.25%;
+  }
+  iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border: 0;
+    max-height: 217px;
+    max-width: 440px;
   }
 }

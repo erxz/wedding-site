@@ -70,7 +70,7 @@ $grey: hsl(0,
 /// Used by `h4`
 @mixin heading-h4 {
   @include font--primary-bold;
-  font-size: rem-calc(18);
+  font-size: rem-calc(16);
   letter-spacing: 2px;
   color: $grey;
 }
