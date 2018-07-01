@@ -24,7 +24,8 @@
     "object-assign": "^4.1.1",
     "offline-plugin": "^5.0.5",
     "promise-polyfill": "^8.0.0",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "v-lazy-image": "^1.2.1"
   },
   "devDependencies": {
     "@poi/plugin-bundle-report": "10.0.1",

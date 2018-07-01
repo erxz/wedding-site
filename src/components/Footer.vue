@@ -20,7 +20,7 @@
 
   .footer-wrapper {
     max-width: 940px;
-    width: 95%;
+    width: 92%;
   }
 
   .link-git {

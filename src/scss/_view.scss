@@ -42,6 +42,18 @@ img {
   box-shadow: 0 9px 16px 0 rgba(0, 0, 0, 0.16);
 }
 
+img:not([src]) {
+  visibility: hidden;
+}
+
+/* Fixes Firefox anomaly during image load */
+
+@-moz-document url-prefix() {
+  img:-moz-loading {
+    visibility: hidden;
+  }
+}
+
 // Grid
 // -------------
 .container {
@@ -82,6 +94,31 @@ section {
 
 .pattern {
   background-image: url('../assets/images/pattern.png');
+}
+
+.grey-pattern {
+  @include media(sm) {
+    min-height: 100vh;
+    &:before {
+      content: " ";
+      background-image: url('../assets/images/bg22x.png');
+      background-repeat: no-repeat;
+      background-position: 100%;
+      background-size: cover;
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top: 70px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transition: all 1s ease-out;
+      transform: translateZ(0);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      z-index: -1;
+    }
+  }
 }
 
 .uppercase {
@@ -130,28 +167,6 @@ section {
 // Intro
 // -------------
 .intro {
-  @include media(sm) {
-    min-height: 100vh;
-    &:before {
-      content: " ";
-      background-image: url('../assets/images/bg22x.png');
-      background-repeat: no-repeat;
-      background-position: 100%;
-      background-size: cover;
-      width: 100%;
-      height: auto;
-      position: absolute;
-      top: 70px;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      transition: all 1s ease-out;
-      transform: translateZ(0);
-      -webkit-backface-visibility: hidden;
-      backface-visibility: hidden;
-      z-index: -1;
-    }
-  }
   &-item {
     &--left {
       align-self: center;
@@ -250,5 +265,27 @@ section {
     border: 0;
     max-height: 217px;
     max-width: 440px;
+  }
+}
+
+.photos {
+  padding: ($padding*2) 0;
+  &-two {
+    @include media(sm) {
+      float: right;
+    }
+  }
+}
+
+.mansory {
+  display: flex;
+  flex-flow: column wrap;
+  max-height: 800px;
+  &-brick {
+    padding: 10px;
+    width: 50%;
+    @include media(sm-only) {
+      width: 100%;
+    }
   }
 }
