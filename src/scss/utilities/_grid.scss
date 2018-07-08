@@ -11,7 +11,6 @@ $col-nine: 75%;
 $col-ten: 83.333%;
 $col-eleven: 91.667%;
 $col-twelve: 100%;
-
 // Row
 @mixin row {
   display: flex;
@@ -19,7 +18,7 @@ $col-twelve: 100%;
   margin-right: -15px;
   margin-left: -15px;
   @include media (sm-only) {
-    display: block;
+    flex-direction: column;
     width: 100%;
     margin: 0 auto;
     text-align: center;

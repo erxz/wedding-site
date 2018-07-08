@@ -1,6 +1,6 @@
 <template>
   <main>
-    <section class="pattern grey-pattern">
+    <section class="pattern grey-pattern fadeIn">
       <div class="big-heart mx-auto center">
         <svg width="29" height="25" viewBox="0 0 24 21" aria-labelledby="heart" xmlns="http://www.w3.org/2000/svg">
           <path d="M11.608 20.997c-22.647-12.354-6.268-27.713 0-17.369 6.269-10.344 22.649 5.015 0 17.369z" />
@@ -12,7 +12,7 @@
             <h1>Alberto & Lucia</h1>
           </div>
           <div class="col intro-item--center">
-            <img src="~@/assets/images/alberlucia2x.jpg" alt="Alberto y Lucía dándose la mano" width="427">
+            <img v-lazy="require(`../assets/images/alberlucia2x.jpg`)" alt="Alberto y Lucía dándose la mano" width="427">
           </div>
           <div class="col intro-item--right">
             <p class="type-italic">Nos hace muy felices celebrar nuestra boda junto a vosotros. Completa el formulario y confirma si asistirás!</p>
@@ -25,7 +25,7 @@
       <div class="container container--two where-bg">
         <div class="row">
           <div class="col where-col--left">
-            <v-lazy-image :src="require(`../assets/images/location2x.png`)" alt="Foto de Villa María" width="395" class="where-img" />
+            <img v-lazy="require(`../assets/images/location2x.png`)" alt="Foto de Villa María" width="395" class="where-img" />
             <!-- <div class="where-link">
               <a href="https://goo.gl/maps/aM4tvNE5Yz52" class="uppercase" rel="noopener" target="_blank">ver en google maps</a>
             </div> -->
@@ -55,12 +55,12 @@
         </div>
         <div class="row p-t-spacer">
           <div class="col">
-            <h4 class="uppercase">¿nos ayudáis con la luna de miel?</h4>
+            <h6 class="uppercase mt-0">¿nos ayudáis con la luna de miel?</h6>
             <h3>ES3600811580380006184030</h3>
             <div class="divider"></div>
           </div>
           <div class="col col--right">
-            <v-lazy-image :src="require(`../assets/images/honeymoon.png`)" alt="Imagen de una isla paradisíaca" />
+            <img v-lazy="require(`../assets/images/honeymoon.png`)" alt="Imagen de una isla paradisíaca" />
           </div>
         </div>
       </div>
@@ -75,16 +75,16 @@
         </div>
         <div class="mansory">
           <div class="mansory-brick">
-            <v-lazy-image :src="require(`../assets/images/photo12x.png`)" alt="foto de alber y lucía" width="568" height="379"/>
+            <img v-lazy="require(`../assets/images/photo12x.png`)" class="lazy" alt="foto de alber y lucía" width="568" height="379"/>
+          </div>
+          <div class="mansory-brick"> 
+            <img v-lazy="require(`../assets/images/photo32x.png`)" class="lazy photos-two" alt="foto de alber y lucía" width="440"/>
           </div>
           <div class="mansory-brick">
-            <v-lazy-image :src="require(`../assets/images/photo32x.png`)" class="photos-two" alt="foto de alber y lucía" width="440"/>
+            <img v-lazy="require(`../assets/images/photo22x.png`)" class="lazy" alt="foto de alber y lucía" width="405" height="270" />
           </div>
           <div class="mansory-brick">
-            <v-lazy-image :src="require(`../assets/images/photo22x.png`)" alt="foto de alber y lucía" width="405" height="270" />
-          </div>
-          <div class="mansory-brick">
-            <v-lazy-image :src="require(`../assets/images/photo42x.png`)" alt="foto de alber y lucía" width="500"/>
+            <img v-lazy="require(`../assets/images/photo42x.png`)" class="lazy" alt="foto de alber y lucía" width="500"/>
           </div>
         </div>
       </div>
@@ -94,13 +94,3 @@
 
 <!-- If I have to write more css I prefer another separate file -->
 <style src="../scss/main.scss" scoped></style>
-
-<script>
-import VLazyImage from "v-lazy-image";
-export default {
-  components: {
-    VLazyImage
-  }
-}
-</script>
-

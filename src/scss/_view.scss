@@ -2,8 +2,8 @@
 // -------------
 h1 {
   @include heading-h1;
+  margin: 0;
   line-height: 1;
-  text-transform: capitalize;
 }
 
 h2 {
@@ -102,7 +102,6 @@ section {
       right: 0;
       transition: all 1s ease-out;
       transform: translateZ(0);
-      -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
       z-index: -1;
     }
@@ -119,7 +118,7 @@ section {
 
 .divider {
   background-color: $black-line;
-  height: 1.8px;
+  height: 1px;
   width: 110px;
   margin-top: 2em;
   margin-bottom: 2em;
@@ -135,6 +134,10 @@ section {
 
 .right {
   text-align: right
+}
+
+.mt-0 {
+  margin-top: 0;
 }
 
 // View
@@ -161,6 +164,7 @@ section {
       z-index: 2;
       @include column(32%);
       @include media(sm) {
+        margin-top: -2.5em;
         margin-right: -2em;
         h1 {
           font-size: rem-calc(75);
@@ -198,6 +202,9 @@ section {
     @include media(sm) {
       text-align: right;
     }
+    @include media(sm-only) {
+      order: 2;
+    }
   }
   &-link {
     display: inline-block;
@@ -219,10 +226,7 @@ section {
       &:before {
         content: " ";
         position: absolute;
-        background-image: url('../assets/images/location-bg.png');
-        background-repeat: no-repeat;
-        background-position: bottom;
-        background-size: contain;
+        background: url('../assets/images/location-bg.png') bottom contain no-repeat;
         width: 100%;
         max-width: 300px;
         height: 100%;
@@ -236,7 +240,7 @@ section {
   }
 }
 
-// Map 
+// Map
 // -------------
 .google-map {
   overflow: hidden;
@@ -267,7 +271,7 @@ section {
       float: right;
     }
   }
-  &:before{
+  &:before {
     top: -85px;
     height: 95%;
     transform: scale(-1, 1);
