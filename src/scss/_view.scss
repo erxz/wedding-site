@@ -2,7 +2,8 @@
 // -------------
 h1 {
   @include heading-h1;
-  text-transform: capitalize;
+  margin: 0;
+  line-height: 1;
 }
 
 h2 {
@@ -10,22 +11,28 @@ h2 {
 }
 
 h3 {
-  @include heading-h3;
+  @include heading-h2-sm;
+}
+
+h4 {
+  @include heading-h4;
+  margin-top: 0;
 }
 
 h6 {
   @include heading-h6;
 }
 
-h1,
 h2,
 h3,
+h4,
 h6 {
   line-height: 1.2;
 }
 
 p {
   @include paragraph;
+  margin-top: 0;
 }
 
 img {
@@ -33,6 +40,9 @@ img {
   max-width: 100%;
   height: auto;
   box-shadow: 0 9px 16px 0 rgba(0, 0, 0, 0.16);
+  @include media(xs-only) {
+    max-width: 85%;
+  }
 }
 
 // Grid
@@ -42,6 +52,12 @@ img {
   &--one {
     @include container-size(1069px);
   }
+  &--two {
+    @include container-size(1169px);
+  }
+  &--three {
+    @include container-size(869px);
+  }
 }
 
 .row {
@@ -50,24 +66,32 @@ img {
 
 .col {
   @include col;
+  &--right {
+    @include media(sm) {
+      padding-left: 1.5rem;
+    }
+  }
 }
 
 // Helpers
 // -------------
-.uppercase {
-  text-transform: uppercase;
+$padding: 2rem;
+section {
+  position: relative;
+  padding-bottom: $padding;
 }
 
-.btn {
-  @include btn;
+.p-t-spacer {
+  padding-top: $padding;
 }
 
-// View
-// -------------
-.bg-section {
-  background-image: url('../assets/images/topo.svg');
+.pattern {
+  background-image: url('../assets/images/pattern.png');
+}
+
+.grey-pattern {
   @include media(sm) {
-    height: 100vh;
+    min-height: 100vh;
     &:before {
       content: " ";
       background-image: url('../assets/images/bg22x.png');
@@ -83,15 +107,47 @@ img {
       right: 0;
       transition: all 1s ease-out;
       transform: translateZ(0);
-      -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
       z-index: -1;
     }
   }
 }
 
-.big-heart {
+.uppercase {
+  text-transform: uppercase;
+}
+
+.btn {
+  @include btn;
+}
+
+.divider {
+  background-color: $black-line;
+  height: 1px;
+  width: 110px;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  @include media(sm-only) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.center {
   text-align: center;
+}
+
+.right {
+  text-align: right
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+// View
+// -------------
+.big-heart {
   padding: 2rem 0;
   @include media(xs-only) {
     padding-bottom: 1rem;
@@ -104,6 +160,8 @@ img {
   }
 }
 
+// Intro
+// -------------
 .intro {
   &-item {
     &--left {
@@ -111,9 +169,10 @@ img {
       z-index: 2;
       @include column(32%);
       @include media(sm) {
-        margin-right: -30px;
+        margin-top: -2.5em;
+        margin-right: -2em;
         h1 {
-          font-size: rem-calc(75)
+          font-size: rem-calc(75);
         }
       }
     }
@@ -121,8 +180,121 @@ img {
       @include column(41%);
     }
     &--right {
-      margin-left: 1rem;
+      margin-left: 1em;
       align-self: flex-end;
+    }
+  }
+}
+
+// Where
+// -------------
+.where {
+  h2 {
+    margin: .5em 0;
+  }
+  h6 {
+    margin: 1.5em 0;
+  }
+  .container {
+    position: relative;
+  }
+  &-img {
+    @include media(sm) {
+      margin-top: -3em;
+    }
+  }
+  &-col--left {
+    @include media(sm) {
+      text-align: right;
+    }
+    @include media(sm-only) {
+      order: 2;
+    }
+  }
+  &-link {
+    display: inline-block;
+    margin-top: 3em;
+    @include media(sm-only) {
+      width: 100%;
+      text-align: center;
+    }
+    a {
+      font-size: rem-calc(14);
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: $black;
+      border-bottom: 1px solid #212121;
+    }
+  }
+  &-bg {
+    @include media(sm) {
+      &:before {
+        content: " ";
+        position: absolute;
+        background: url('../assets/images/location-bg.png') bottom contain no-repeat;
+        width: 100%;
+        max-width: 300px;
+        height: 100%;
+        bottom: 15px;
+        z-index: -1;
+      }
+    }
+  }
+  &-map {
+    margin-top: 3.5em;
+  }
+}
+
+// Map
+// -------------
+.google-map {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+  @include media(sm) {
+    padding-bottom: 39.25%;
+  }
+  iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border: 0;
+    max-height: 217px;
+    max-width: 440px;
+  }
+}
+
+// Photos
+// -------------
+.photos {
+  padding: ($padding*2) 0;
+  &-two {
+    @include media(sm) {
+      float: right;
+    }
+  }
+  &:before {
+    top: -85px;
+    height: 95%;
+    transform: scale(-1, 1);
+  }
+}
+
+.mansory {
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+  @include media(xs) {
+    max-height: 800px;
+  }
+  &-brick {
+    padding: 10px;
+    width: 50%;
+    @include media(sm-only) {
+      width: 100%;
     }
   }
 }

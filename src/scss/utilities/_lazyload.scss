@@ -1,0 +1,44 @@
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+img[lazy=loading],
+img[lazy=error] {
+  color: rgba(0, 0, 0, 0.0001);
+  background-color: #eff0f1;
+  width: 350px;
+  position: absolute;
+}
+
+img[lazy=error] {
+  border: 1px dotted red;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: fadeIn;
+}
+
+img[lazy=loaded] {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: fadeIn;
+}
+
+.fadeIn {
+  animation-duration: .8s;
+  animation-fill-mode: both;
+  animation-name: fadeIn;
+}

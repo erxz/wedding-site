@@ -12,7 +12,7 @@
     "report": "poi build --bundle-report",
     "serve": "serve dist --single",
     "test": "tyu",
-    "deploy": "tyu && poi build && firebase deploy"
+    "deploy": "tyu & poi build && firebase deploy"
   },
   "author": {
     "name": "enreckless.com"
@@ -24,7 +24,9 @@
     "object-assign": "^4.1.1",
     "offline-plugin": "^5.0.5",
     "promise-polyfill": "^8.0.0",
-    "vue-router": "^3.0.1"
+    "vue-lazyload": "^1.2.6",
+    "vue-router": "^3.0.1",
+    "google-fonts-webpack-plugin": "git+https://github.com/navelpluisje/google-fonts-webpack-plugin.git"
   },
   "devDependencies": {
     "@poi/plugin-bundle-report": "10.0.1",
@@ -35,6 +37,7 @@
     "poi": "^10.2.9",
     "sass-loader": "^7.0.3",
     "serve": "^9.1.0",
-    "tyu": "^1.0.4"
+    "tyu": "^1.0.4",
+    "vue": "^2.5.16"
   }
 }

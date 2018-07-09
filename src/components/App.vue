@@ -15,11 +15,9 @@ export default {
 }
 </script>
 
-<!-- CSS libraries -->
-<style src="normalize.css/normalize.css"></style>
-
 <!-- Some global styles -->
-<style>
+<style lang="scss">
+  @import '~normalize.css';
   * {
     box-sizing: border-box;
   }
@@ -27,6 +25,7 @@ export default {
     font-family:  "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
     -webkit-font-smoothing: antialiased;
     color: hsl(0, 0%, 11%);
+    font-size: 16px;
     line-height: 1.5;
   }
   a {

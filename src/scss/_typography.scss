@@ -1,36 +1,27 @@
 // Typography
 // ===============
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC:700|Playfair+Display:400,400i,700');
 $font-title: 'Playfair Display SC',
 $font-stack-system;
 $font-primary: 'Playfair Display',
 $font-stack-system;
 // Colours
 // ===============
-$black: hsl(0,
-0%,
-11%);
-$black-bis: hsl(0,
-0%,
-16%);
-$black-ter: hsl(0,
-0%,
-25%);
-$black-line: hsl(0,
-0%,
-13%);
-/// Font title
-@mixin font--title {
-  font-family: $font-title;
-  font-style: normal;
-  font-weight: 700;
-}
-
+$black: hsl(0, 0%, 11%);
+$black-bis: hsl(0, 0%, 25%);
+$black-line: hsl(0, 0%, 13%);
+$grey: hsl(0, 0%, 59%);
 /// Font Primary Regular.
 @mixin font--primary-regular {
   font-family: $font-primary;
   font-style: normal;
   font-weight: 400;
+}
+
+/// Font Primary Bold.
+@mixin font--primary-bold {
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: 700;
 }
 
 /// Font Primary Italic.
@@ -40,50 +31,60 @@ $black-line: hsl(0,
   font-weight: 400;
 }
 
-/// Used by `h2` and `h3`
-@mixin heading-italic {
-  @include font--primary-italic;
-  color: $black-bis;
-}
-
 /// Used by `h1`
 @mixin heading-h1 {
+  font-family: $font-title;
+  font-style: normal;
+  font-weight: 700;
   font-size: rem-calc(65);
-  @include font--title;
   color: $black;
-  margin: 0;
+  @include media(xs-only) {
+    font-size: rem-calc(35);
+    margin-bottom: 1rem;
+  }
 }
 
 /// Used by `h2`
 @mixin heading-h2 {
-  @include heading-italic;
-  font-size: rem-calc(24)
+  @include font--primary-bold;
+  font-size: rem-calc(35);
+  @include media(xs-only) {
+    font-size: rem-calc(25);
+  }
 }
 
 /// Used by `h3`
-@mixin heading-h3 {
-  @include heading-italic;
+@mixin heading-h2-sm {
+  @include font--primary-bold;
   font-size: rem-calc(24);
+}
+
+/// Used by `h4`
+@mixin heading-h4 {
+  font-family: $font-title;
+  font-size: rem-calc(16);
+  letter-spacing: 2px;
+  color: $grey;
 }
 
 /// Used by `h6`
 @mixin heading-h6 {
-  font-size: rem-calc(14);
-  @include font--primary-regular;
-  color: $black;
+  font-style: normal;
+  font-weight: 400;
+  font-size: rem-calc(16);
+  letter-spacing: 2px;
 }
 
 /// Used by `p`
 @mixin paragraph {
   @include font--primary-italic;
-  color: $black-ter;
+  color: $black-bis;
   font-size: rem-calc(20);
-  margin-top: 0;
 }
 
 // Button
 @mixin btn {
-  font-size: rem-calc(12);
+  font-size: rem-calc(14);
   letter-spacing: 1.5px;
   color: white;
   display: inline-block;
@@ -92,23 +93,19 @@ $black-line: hsl(0,
   white-space: nowrap;
   cursor: pointer;
   vertical-align: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   padding: .475rem .85rem;
-  line-height: 1.5;
   background: linear-gradient(180deg, $black, tint($black, 5%));
   border: 1px solid $black;
   box-shadow: 0 9px 16px 1px rgba($black, 0.30);
-  transition: color .2s ease-in, background-color .2s ease-in, border-color .2s ease-in;
+  transition: all 0.3s ease;
   &:hover {
-    background: linear-gradient(180deg, tint($black, 10%), tint($black, 20%));
+    transform: translateY(2px);
+    box-shadow: 0 9px 16px 1px rgba(28, 28, 28, 0.2);
   }
   &:focus {
     outline: 0;
-    background: linear-gradient(180deg, shade($black, 20%), shade($black, 20%));
+    background: linear-gradient(180deg, shade($black, 30%), shade($black, 30%));
     border-color: shade($black, 30%);
-    box-shadow: inset 0 0 0 0 transparent, 0 1px 0 0 rgba(22, 29, 37, .05), 0 0 1px 0 shade($black, 20%);
   }
 }
