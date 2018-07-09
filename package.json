@@ -12,7 +12,7 @@
     "report": "poi build --bundle-report",
     "serve": "serve dist --single",
     "test": "tyu",
-    "deploy": "tyu && poi build && firebase deploy"
+    "deploy": "poi build && firebase deploy"
   },
   "author": {
     "name": "enreckless.com"
@@ -37,6 +37,7 @@
     "poi": "^10.2.9",
     "sass-loader": "^7.0.3",
     "serve": "^9.1.0",
-    "tyu": "^1.0.4"
+    "tyu": "^1.0.4",
+    "vue": "^2.5.16"
   }
 }

@@ -40,6 +40,9 @@ img {
   max-width: 100%;
   height: auto;
   box-shadow: 0 9px 16px 0 rgba(0, 0, 0, 0.16);
+  @include media(xs-only) {
+    max-width: 85%;
+  }
 }
 
 // Grid
@@ -64,7 +67,9 @@ img {
 .col {
   @include col;
   &--right {
-    padding-left: 1.5rem;
+    @include media(sm) {
+      padding-left: 1.5rem;
+    }
   }
 }
 
@@ -281,7 +286,10 @@ section {
 .mansory {
   display: flex;
   flex-flow: column wrap;
-  max-height: 800px;
+  text-align: center;
+  @include media(xs) {
+    max-height: 800px;
+  }
   &-brick {
     padding: 10px;
     width: 50%;

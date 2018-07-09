@@ -38,6 +38,10 @@ $grey: hsl(0, 0%, 59%);
   font-weight: 700;
   font-size: rem-calc(65);
   color: $black;
+  @include media(xs-only) {
+    font-size: rem-calc(35);
+    margin-bottom: 1rem;
+  }
 }
 
 /// Used by `h2`
@@ -45,7 +49,7 @@ $grey: hsl(0, 0%, 59%);
   @include font--primary-bold;
   font-size: rem-calc(35);
   @include media(xs-only) {
-    font-size: rem-calc(28);
+    font-size: rem-calc(25);
   }
 }
 
@@ -80,7 +84,7 @@ $grey: hsl(0, 0%, 59%);
 
 // Button
 @mixin btn {
-  font-size: rem-calc(12);
+  font-size: rem-calc(14);
   letter-spacing: 1.5px;
   color: white;
   display: inline-block;
