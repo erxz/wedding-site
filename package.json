@@ -25,8 +25,7 @@
     "offline-plugin": "^5.0.5",
     "promise-polyfill": "^8.0.0",
     "vue-lazyload": "^1.2.6",
-    "vue-router": "^3.0.1",
-    "google-fonts-webpack-plugin": "git+https://github.com/navelpluisje/google-fonts-webpack-plugin.git"
+    "vue-router": "^3.0.1"
   },
   "devDependencies": {
     "@poi/plugin-bundle-report": "10.0.1",
@@ -38,6 +37,7 @@
     "sass-loader": "^7.0.3",
     "serve": "^9.1.0",
     "tyu": "^1.0.4",
-    "vue": "^2.5.16"
+    "vue": "^2.5.16",
+    "google-fonts-webpack-plugin": "git+https://github.com/navelpluisje/google-fonts-webpack-plugin.git"
   }
 }

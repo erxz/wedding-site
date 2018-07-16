@@ -152,12 +152,18 @@ section {
   @include media(xs-only) {
     padding-bottom: 1rem;
   }
-  svg {
-    transition: transform .2s ease-in-out;
-  }
-  svg:hover {
-    transform: scale(1.2);
-  }
+  h2 {
+    font-size: rem-calc(28);
+    margin: 0;
+    @include media(mobile-only) {
+      font-size: rem-calc(20);
+    }
+  } // svg {
+  //   transition: transform .2s ease-in-out;
+  // }
+  // svg:hover {
+  //   transform: scale(1.2);
+  // }
 }
 
 // Intro
@@ -209,6 +215,11 @@ section {
     }
     @include media(sm-only) {
       order: 2;
+    }
+  }
+  &-col--right {
+    @include media(sm) {
+      padding-top: 3em;
     }
   }
   &-link {
@@ -297,4 +308,10 @@ section {
       width: 100%;
     }
   }
+}
+
+.diego-link {
+  background-color: #292929;
+  color: white;
+  padding: 0px 3px;
 }

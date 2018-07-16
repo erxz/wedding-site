@@ -9,11 +9,11 @@ export default new Router({
   mode: 'history',
   base: window.location.pathName,
   routes: [{
-      path: '/test',
+      path: '/',
       component: Home
     },
     {
-      path: '/',
+      path: '/construction',
       component: Construction,
       props: {
         introText: "Holi la web está en construcción, pero pronto estará LIVE!"
