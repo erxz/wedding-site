@@ -8,7 +8,7 @@
       <div class="container container--one">
         <div class="row">
           <div class="col intro-item--left">
-            <h1>Alberto & Lucia</h1>
+            <h1>Alberto & Lucía</h1>
           </div>
           <div class="col intro-item--center">
             <img v-lazy="require(`../assets/images/alberlucia2x.jpg`)" alt="Alberto y Lucía dándose la mano" width="427">
@@ -26,7 +26,7 @@
           <div class="col where-col--left">
             <img v-lazy="require(`../assets/images/location2x.png`)" alt="Foto de Villa María" width="395" class="where-img" />
             <div class="where-link">
-              <p>Cerca de esta finca encontraréis hoteles donde podéis alojaros y descansar de la gran fiesta. Os dejamos un mapa!</p>
+              <p class="where-text">Cerca de esta finca encontraréis hoteles donde podéis alojaros y descansar de la gran fiesta. Os dejamos un mapa!</p>
             </div>
           </div>
           <div class="col col--right where-col--right">
