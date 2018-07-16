@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="app" v-bind:class="{ 'app-xs font-system': $route.path !== '/test' }">
+  <div id="app" class="app" v-bind:class="{ 'app-xs font-system': $route.path !== '/' }">
     <router-view />
     <appfooter></appfooter>
   </div>

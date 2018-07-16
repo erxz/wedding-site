@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer" v-bind:class="{ 'footer-wrapper mx-auto': $route.path == '/test' }">
+  <footer class="footer" v-bind:class="{ 'footer-wrapper mx-auto': $route.path == '/' }">
       <div class="footer-item primary-font">
         Alber & Lucía
       </div>
