@@ -148,22 +148,20 @@ section {
 // View
 // -------------
 .big-heart {
-  padding: 2rem 0;
-  @include media(xs-only) {
-    padding-bottom: 1rem;
-  }
+  padding: 1rem 0;
   h2 {
     font-size: rem-calc(28);
     margin: 0;
     @include media(mobile-only) {
       font-size: rem-calc(20);
     }
-  } // svg {
-  //   transition: transform .2s ease-in-out;
-  // }
-  // svg:hover {
-  //   transform: scale(1.2);
-  // }
+  }
+  svg {
+    transition: transform .2s ease-in-out;
+  }
+  svg:hover {
+    transform: scale(1.2);
+  }
 }
 
 // Intro
@@ -186,7 +184,7 @@ section {
       @include column(41%);
     }
     &--right {
-      margin-left: 1em;
+      //margin-left: 1em;
       align-self: flex-end;
     }
   }
@@ -290,8 +288,11 @@ section {
       float: right;
     }
   }
+  @include media(sm-only) {
+    padding-bottom: $padding/2;
+  }
   &:before {
-    top: -85px;
+    top: 0;
     height: 95%;
     transform: scale(-1, 1);
   }
