@@ -8,6 +8,7 @@ module.exports = {
     title: pkg.productName,
     description: pkg.description,
     site: pkg.productSite,
+    web: pkg.productWeb,
     template: path.join(__dirname, "index.ejs")
   },
   plugins: [

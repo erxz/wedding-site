@@ -1,8 +1,9 @@
 {
   "private": true,
   "name": "boda-api",
-  "productName": "Boda Alberto y Lucía",
+  "productName": "Boda Lucía y Alberto",
   "productSite": "bodapañera",
+  "productWeb": "https://bodapañera.es",
   "description": "Nos hace muy felices celebrar nuestra boda junto a vosotros. La ceremonia tendrá lugar el 6 de Octubre a las 18:30h en Villa María bonita, Crevillente.",
   "version": "1.7.0",
   "license": "MIT",

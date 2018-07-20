@@ -2,19 +2,22 @@
   <main>
     <section class="pattern grey-pattern fadeIn">
       <div class="big-heart mx-auto center">
+        <svg width="29" height="25" viewBox="0 0 24 21" aria-labelledby="heart" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11.608 20.997c-22.647-12.354-6.268-27.713 0-17.369 6.269-10.344 22.649 5.015 0 17.369z" />
+        </svg>
         <h2>6 de Octubre del 2018
               <br> 18.30h</h2>
       </div>
       <div class="container container--one">
         <div class="row">
           <div class="col intro-item--left">
-            <h1>Alberto & Lucia</h1>
+            <h1>Alberto & Lucía</h1>
           </div>
           <div class="col intro-item--center">
             <img v-lazy="require(`../assets/images/alberlucia2x.jpg`)" alt="Alberto y Lucía dándose la mano" width="427">
           </div>
           <div class="col intro-item--right">
-            <p class="type-italic">Bienvenidos a este pequeño espacio dedicado a nuestra boda.    Completa el formulario y confirma si asistirás!</p>
+            <p class="type-italic">Bienvenidos a este pequeño espacio dedicado a nuestra boda. <br>¡Completa el formulario y confirma si asistirás!</p>
             <a href="https://goo.gl/forms/J8DAIlVWYavx0XnD2" class="btn uppercase">completar</a>
           </div>
         </div>
@@ -26,12 +29,12 @@
           <div class="col where-col--left">
             <img v-lazy="require(`../assets/images/location2x.png`)" alt="Foto de Villa María" width="395" class="where-img" />
             <div class="where-link">
-              <p>Cerca de esta finca encontraréis hoteles donde podéis alojaros y descansar de la gran fiesta. Os dejamos un mapa!</p>
+              <p class="where-text">Cerca de esta finca encontraréis hoteles donde podéis alojaros y descansar de la gran fiesta ¡Os dejamos un mapa!</p>
             </div>
           </div>
           <div class="col col--right where-col--right">
             <p class="type-italic">El lugar que hemos elegido para compartir este día tan especial con vosotros es </p>
-            <h2 style="font-weight:bold">Villa María Bonita (Crevillente).</h2>
+            <h2 style="font-weight:bold">Villa María Bonita (Crevillente)</h2>
             <div class="divider"></div>
             <div class="where-map google-map">
               <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d100276.89466781069!2d-0.8830823!3d38.2411596!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd63b94322204949%3A0x49368d13b65285ea!2zVmlsbGEgIk1hcsOtYSBCb25pdGEi!5e0!3m2!1sen!2ses!4v1530359510883"
@@ -46,7 +49,7 @@
         <div class="row p-t-spacer">
           <div class="col">
             <h6 class="uppercase mt-0">¿nos ayudáis con la luna de miel?</h6>
-            <p>Podéis aportar vuestro granito de arena en este número de cuenta para que podamos realizar nuestro viaje de novios y traeros muchos regalitos!!</p>
+            <p>Podéis aportar vuestro granito de arena para nuestro viaje de novios en este número de cuenta. ¡¡Os traeremos muchos regalitos!!</p>
             <h3>ES3600811580380006184030</h3>
             <div class="divider"></div>
           </div>
@@ -60,8 +63,7 @@
       <div class="container container--one">
         <div class="row">
           <div class="col center">
-            <p>Poneros bien guapos que nuestro gran fotógrafo
-              <br><a href="http://www.ontheroadstudio.es/" target="_blank" rel="noopener noreferrer" class="diego-link">Diego Ruiz</a> va a hacer unas fotos tan geniales como estas. <br>Cuando pase la boda podréis encontrar todos esos recuerdos en esta web.</p>
+            <p>Poneos bien guapos, que nuestro gran fotógrafo <a href="http://www.ontheroadstudio.es/" target="_blank" rel="noopener noreferrer" class="diego-link">Diego Ruiz</a> <br>captará los mejores e inolvidables momentos de nuestro día tan especial</p>
           </div>
         </div>
         <div class="mansory">
@@ -76,6 +78,11 @@
           </div>
           <div class="mansory-brick">
             <img v-lazy="require(`../assets/images/photo42x.png`)" class="lazy" alt="foto de alber y lucía" width="500"/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col center">
+            <p class="p-t-spacer">¡Y recuerda! Después de la boda, no olvidéis volver a vistar esta web que haremos <br>un álbum con todos nuestros recuerdos</p>
           </div>
         </div>
       </div>
