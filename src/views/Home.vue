@@ -50,7 +50,7 @@
           <div class="col">
             <h6 class="uppercase mt-0">¿nos ayudáis con la luna de miel?</h6>
             <p>Podéis aportar vuestro granito de arena para nuestro viaje de novios en este número de cuenta. ¡¡Os traeremos muchos regalitos!!</p>
-            <h3>ES3600811580380006184030</h3>
+            <h3>ES3600811580380006184830</h3>
             <div class="divider"></div>
           </div>
           <div class="col col--right">
