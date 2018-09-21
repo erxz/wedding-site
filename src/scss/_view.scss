@@ -152,7 +152,7 @@ section {
   h2 {
     font-size: rem-calc(28);
     margin: 0;
-    @include media(mobile-only) {
+    @include media(sm) {
       font-size: rem-calc(20);
     }
   }
